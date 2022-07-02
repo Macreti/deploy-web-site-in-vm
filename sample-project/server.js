@@ -3,7 +3,7 @@ const express = require('express');
 //Create an app
 const app = express();
 app.get('/', (req, res) => {
-    res.send('Hello world, you are succeed to deploy you first app.\n');
+    res.send('Hello world, you are succeed to deploy your first app.\n');
 });
 
 //Listen port
