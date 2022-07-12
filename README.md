@@ -149,12 +149,48 @@ Clone the repository https://github.com/Macreti/deploy-website-in-vm
    vagrant up name_of_your_vm
    ``` 
 
+3. Provisionning your VM with shell (if you don't copy & paste the content of my Vagrantfile)
 
+    According to the official documentation you can do it directly on your Vagrantfile or you can write the shell code inside another file and call it in your Vagrantfile.
 
-3. Install NPM packages
+    I love elegant things, as i done create one file with .sh extension and copy and paste the content of my install_tools.sh inside yours.
+
    ```sh
-   npm install
+   chmod+x your_file.sh
    ```
+
+   Open your Vagrantfile and add the path of your file (You can look how i do it inside my own).
+
+   To update your VM you can do:
+
+    ```sh
+   vagrant reload
+   ```
+
+   or
+
+   ```sh
+   vagrant reload name_of_your_vm
+   ```
+
+   You can also run 
+
+   ```sh
+   vagrant provision
+   ```
+
+   or
+
+   ```sh
+   vagrant provision name_of_your_vm
+   ```
+   Congratulation your VM is ready to work with image or container docker.
+
+   To connect inside your VM run:
+   ```sh
+   vagrant ssh name_of_your_vm
+   ```
+
 4. Enter your API in `config.js`
    ```js
    const API_KEY = 'ENTER YOUR API';
@@ -167,7 +203,7 @@ Clone the repository https://github.com/Macreti/deploy-website-in-vm
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-This project is designed to make developers and operational staff understand how to deploy an application or website in a real-world situation. The mounted virtual environment is similar to the servers typically used, whether on classic hosts or cloud solutions such as an ec2 on AWS.
+This project is designed to make developers and operationals staff understand how to deploy an application or website in a real-world situation. The mounted virtual environment is similar to the servers typically used, whether on classic hosts or cloud solutions such as an ec2 on AWS.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
