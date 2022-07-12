@@ -191,13 +191,37 @@ Clone the repository https://github.com/Macreti/deploy-website-in-vm
    vagrant ssh name_of_your_vm
    ```
 
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+4. Create your simple app
+
+    In my case i created simple nodeJs app that return "Hello world, you are succeed to deploy your first app".
+
+    You can do the same just to understand how it work. Look at my sample-project.
+
+    You can create your app in another directory out of the directory that contains Vagrantfile (I invited you to do this for more understanding).
+
+5. Build image and deploy to the hub
+   This step assume you use my sample-project
+
+    * Create the Dockerfile to the root of your_project.
+    ```sh
+    cd your_project
+    touch Dockerfile
    ```
-
+    * Copy and paste the content of sample-project/Dockerfile inside yours
+    * Run the command at the root directory: 
+    ```sh
+    docker build -t name_of_your_image .
+    ```
+    * Tag your image with command:
+    ```sh 
+    docker tag name_of_your_image:tag-name username/name_of_your_image:tag-name
+    ```
+    * Push on the hub with: 
+    ```sh
+    docker push username/name_of_your_image:tag-name
+    ``` 
+    
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- USAGE EXAMPLES -->
