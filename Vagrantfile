@@ -9,14 +9,16 @@ Vagrant.configure("2") do |config|
   # The most common configuration options are documented and commented below.
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
+  config.vm.box_check_update = false
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.define "server-ubuntu", autostart: false do |ubuntu|
+  config.vm.define "server-ubuntu" do |ubuntu|
     ubuntu.vm.hostname = "server-ubuntu"
     #ubuntu.vm.network "forwarded_port", guest: 80, host: 8091, auto_correct: true
-    config.vm.network "private_network", type: "dhcp"
+    config.vm.network "private_network", ip: "192.168.10.5"
     ubuntu.vm.box = "bento/ubuntu-18.04"
+    ubuntu.vm.provider "virtualbox"
 
     ubuntu.vm.provision "shell" do |sh|
       sh.path = "install_tools.sh"
