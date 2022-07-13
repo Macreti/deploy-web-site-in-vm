@@ -25,7 +25,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Macreti">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/web-app.png" alt="Logo">
   </a>
 
   <h3 align="center">HomeLab 1:  Deploy Website inside Virtual Machine Vagrant
@@ -70,8 +70,6 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 In this tutorial we are going to show you how to deploy simple web app inside virtual machine using tools as Vagrant and docker.
 
@@ -188,6 +186,10 @@ Clone the repository https://github.com/Macreti/deploy-website-in-vm
    ```sh
    vagrant ssh name_of_your_vm
    ```
+   You show something as below:
+    <div align="center">
+        <img src="images/vagrant-ssh.png" alt="Logo"> 
+    </div>
 
 4. Create your simple app
 
@@ -224,6 +226,22 @@ Clone the repository https://github.com/Macreti/deploy-website-in-vm
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+
+6. Deploy inside your vm
+Create file with extension .sh and copy the content of file <strong>deploy-site.sh</strong> and paste inside yours. Make it executable and custom the deploy inside the file. You can look example on comment line.
+
+To deploy:
+```sh
+   ./name_of_your_file
+   ```
+Go to the browser and lauch http://ip_address:expose_port, in my case http://192.168.10.5:8080
+
+It shows me:
+<div aling="center">
+     <img src="images/web-app.png" alt="Logo">
+</div>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -282,7 +300,6 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 [Node-shield]: https://www.shareicon.net/data/512x512/2015/10/06/112724_development_512x512.png
 [Node-url]: https://nodejs.org/
 [Shell-shield]:https://4vector.com/i/free-vector-shell-logo_089962_Shell_logo.png
-[product-screenshot]: images/screenshot.png
 [Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
 [Svelte-url]: https://svelte.dev/
 [Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
