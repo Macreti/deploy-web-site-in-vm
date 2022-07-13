@@ -84,7 +84,7 @@ Here's why:
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+These stacks help me to build this tutorial. I am working on Ubuntu and they also available on another OS.
 
 * [![Vagrant][Vagrant-shield]][Vagrant-url]
 * [![Docker][Docker-shield]][Docker-url]
